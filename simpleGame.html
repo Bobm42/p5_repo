@@ -7,8 +7,23 @@
     <title>Simple Game</title>
   </head>
   <body>
-    <canvas width="600" height="300"></canvas>
+    <canvas id="simplegame" width="600" height="300"></canvas>
     
-    <script src="SimpleGame.js"></script>
+    <script>
+        let c = document.getElementById("simplegame");
+        let ctx = c.getContext("2d");
+      
+                for(x=80;x<190;x=x+10) {
+                for (y=80;y<190;y=y+10) {
+                let v = x + 20;
+                let t = y + 20;    
+                ctx.beginPath();
+                ctx.arc(v, t, 90, 0, 2 * Math.PI);
+                ctx.stroke();
+                console.log(v,y);
+                }
+            }
+    
+    </script>
   </body>
 </html>
